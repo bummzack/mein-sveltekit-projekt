@@ -2,11 +2,29 @@
     export let data = {};
     export let content;
 </script>
+<style>
+img {
+	max-width: 200px;
+	height: auto;
+}
+
+:global(img.wide) {
+	max-width: 400px;
+}
+
+:global(img.narrow) {
+	max-width: 200px;
+}
+
+:global(img.blurred) {
+	filter: blur(5px);
+}
+</style>
 
 <article>
     {@html content}
 	{#if data.image}
-		<img src={data.image} alt="Image for {data.title}">
+		<img src={data.image} class={data.imageClass} alt="Image for {data.title}">
 	{/if}
 </article>
 
