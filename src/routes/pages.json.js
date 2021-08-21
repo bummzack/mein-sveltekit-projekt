@@ -9,9 +9,10 @@ export async function get() {
 		if (fileName.endsWith('.md')) {
 			const slug = basename(fileName, '.md');
 			const frontmatter = parseFrontMatter(slug);
+
 			accum.push({
 				slug,
-				title: frontmatter?.title || slug
+				title: frontmatter.data?.title || slug
 			})
 		}
 		return accum;
