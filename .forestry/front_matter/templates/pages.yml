@@ -27,3 +27,11 @@ fields:
       file: 
       path: 
   label: Image Class
+- name: blocks
+  type: blocks
+  label: blocks
+  template_types:
+  - teaser
+  config:
+    min: 
+    max: 
